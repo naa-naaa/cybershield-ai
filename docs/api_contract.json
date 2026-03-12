@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "description": "CyberShield AI - Shared API Contract",
+  "webhook": {
+    "endpoint": "POST /analyze",
+    "request": {
+      "text": "string",
+      "sender": "string",
+      "receiver": "string",
+      "thread_id": "string (optional, default: 'default')",
+      "timestamp": "ISO string (optional)",
+      "thread_history": "string[] (optional, last 10 messages)",
+      "platform": "string (optional, default: 'SafeChat')",
+      "sender_gender": "string (optional)",
+      "receiver_gender": "string (optional)",
+      "receiver_age_group": "string (optional: 'adult'|'minor')"
+    },
+    "response": {
+      "action": "'allow' | 'alert' | 'block'",
+      "harm_score": "float 0.0–1.0",
+      "category": "'safe' | 'harassment' | 'threat' | 'hate_speech' | 'explicit'",
+      "severity": "'none' | 'low' | 'medium' | 'high'",
+      "explanation": "string - shown in popup",
+      "strike_count": "integer - current sender strikes",
+      "agent_scores": {
+        "toxicity": "float (T1)",
+        "context": "float (T2)",
+        "emotion": "float (T3)"
+      },
+      "women_risk_flag": "boolean",
+      "victim_distress_flag": "boolean",
+      "incident_id": "UUID string"
+    }
+  },
+  "thresholds": {
+    "allow": "harm_score < 0.40",
+    "alert": "0.40 <= harm_score < 0.80",
+    "block": "harm_score >= 0.80 OR strike_count >= 3"
+  },
+  "pg_notify_channels": {
+    "new_incident": "Fires on every INSERT to incidents table",
+    "women_safety_alert": "Fires when women_risk_flag=TRUE AND harm_score>0.80"
+  },
+  "admin_endpoints": {
+    "GET /admin/incidents": "Paginated incident list",
+    "GET /admin/users": "All users with risk labels",
+    "GET /admin/user/{username}": "Full user profile + incidents",
+    "POST /admin/action": "block | unblock | send_resources",
+    "GET /admin/helplines": "All helpline contacts",
+    "POST /evidence/generate": "Generate evidence PDF",
+    "GET /notifications/{username}": "User notifications",
+    "GET /metrics": "Today's stats"
+  }
+}
