@@ -1,0 +1,104 @@
+.alert-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.alert-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: #FFFBEB;
+  border-bottom: 2px solid #F59E0B;
+}
+
+.alert-banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+  flex-shrink: 0;
+}
+
+.alert-banner-info {
+  flex: 1;
+}
+
+.alert-banner-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #B45309;
+  margin-bottom: 2px;
+}
+
+.alert-banner-desc {
+  font-size: 13px;
+  color: #92400E;
+}
+
+.alert-category {
+  color: #B45309;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.alert-score {
+  color: #B45309;
+  font-weight: 600;
+}
+
+.alert-banner-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.alert-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.alert-btn-edit {
+  background: white;
+  color: #334155;
+}
+
+.alert-btn-edit:hover {
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+.alert-btn-send {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #B45309;
+}
+
+.alert-btn-send:hover {
+  background: rgba(245, 158, 11, 0.18);
+}
+
+.alert-btn-cancel {
+  background: white;
+  color: #94A3B8;
+}
+
+.alert-btn-cancel:hover {
+  color: #E5254B;
+  border-color: #E5254B;
+}

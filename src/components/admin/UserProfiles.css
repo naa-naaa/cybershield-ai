@@ -1,0 +1,95 @@
+.user-profiles { padding: 24px 32px; }
+
+.user-profiles h2 { font-size: 20px; margin-bottom: 20px; }
+
+.up-empty { font-size: 14px; padding: 40px 0; }
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.profile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 150ms ease;
+}
+
+.profile-card:hover { border-color: var(--text-muted); }
+.profile-card.predator { border-left: 3px solid #E5254B; }
+.profile-card.victim { border-left: 3px solid #0891B2; }
+.profile-card.safe { border-left: 3px solid #10B981; }
+
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-avatar.predator { background: rgba(229,37,75,0.12); color: #E5254B; }
+.profile-avatar.victim { background: rgba(8,145,178,0.1); color: #0891B2; }
+.profile-avatar.safe { background: rgba(16,185,129,0.1); color: #10B981; }
+
+.profile-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.profile-name { font-weight: 700; font-size: 15px; }
+
+.profile-badge {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-badge.predator { color: #E5254B; }
+.profile-badge.victim { color: #0891B2; }
+.profile-badge.safe { color: #10B981; }
+
+.profile-strikes { font-size: 13px; color: #F59E0B; font-weight: 600; }
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.profile-stats strong { color: var(--text-primary); }
+
+.profile-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.prof-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.prof-btn:hover { border-color: var(--text-muted); }
+.prof-btn-ban { color: #E5254B; }
+.prof-btn-ban:hover { background: rgba(229,37,75,0.1); border-color: #E5254B; }
+.prof-btn-safe { color: #0891B2; }
+.prof-btn-safe:hover { background: rgba(8,145,178,0.08); border-color: #0891B2; }

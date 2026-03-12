@@ -1,0 +1,136 @@
+.block-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.block-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 48px 40px;
+  background: #FFFFFF;
+  border: 1px solid #FCA5A5;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 25px 80px rgba(229, 37, 75, 0.15), 0 0 0 1px rgba(229, 37, 75, 0.1);
+}
+
+.block-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #FEF2F2;
+  color: #E5254B;
+  margin-bottom: 20px;
+}
+
+.block-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #E5254B;
+  margin-bottom: 8px;
+}
+
+.block-subtitle {
+  font-size: 15px;
+  color: #64748B;
+  margin-bottom: 20px;
+}
+
+.block-strike {
+  font-size: 14px;
+  color: #0F172A;
+  margin-bottom: 8px;
+}
+
+.strike-num {
+  font-size: 18px;
+  font-weight: 700;
+  color: #E5254B;
+}
+
+.block-reason {
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 20px;
+}
+
+.reason-category {
+  color: #F59E0B;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.block-divider {
+  height: 1px;
+  background: #F1F5F9;
+  margin: 20px 0;
+}
+
+.block-quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #334155;
+  padding: 0;
+  margin: 0 0 12px 0;
+  border: none;
+}
+
+.block-stat {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.6;
+}
+
+.block-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.countdown-label {
+  font-size: 13px;
+  color: #64748B;
+}
+
+.countdown-timer {
+  font-size: 28px;
+  font-weight: 700;
+  color: #E5254B;
+  letter-spacing: 2px;
+}
+
+.block-dismiss-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  background: #F8FAFC;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.block-dismiss-btn:hover:not(:disabled) {
+  border-color: #3B82F6;
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.block-dismiss-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
